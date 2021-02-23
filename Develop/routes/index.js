@@ -30,17 +30,17 @@ router.delete("/api/notes/:id", (req, res) => {
 
 
 //HTML calls
-//calls home page
+// //calls home page
 
-router.get("/notes", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/notes.html"));
-});
+// router.get("/notes", function (req, res) {
+//     res.sendFile(path.join(__dirname, "../public/notes.html"));
+// });
 
-router.get("*", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/index.html"));
-    // console.log(get);
-    // console.log(join);
-});
+// router.get("*", function (req, res) {
+//     res.sendFile(path.join(__dirname, "../public/index.html"));
+//     // console.log(get);
+//     // console.log(join);
+// });
 // //call for notes.html
 // router.get("/notes", function (req, res) {
 //     res.sendFile(path.join(__dirname, "../public/notes.html"));
