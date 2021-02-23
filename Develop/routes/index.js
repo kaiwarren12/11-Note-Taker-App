@@ -4,6 +4,7 @@ const app = express();
 const path = require("path");
 const fs = require('fs')
 const uuid = require('uuid')
+const notes = require("../db/notes");
 
 router.get("/api/notes", (req, res) => {
     res.sendFile(path.join(__dirname, "../db/db.json"))
@@ -30,15 +31,20 @@ router.delete("/api/notes/:id", (req, res) => {
 
 //HTML calls
 //calls home page
-router.get("/public/index.html", function (req, res) {
-    res.sendFile(path.join(__dirname, "./public/index.html"));
+
+router.get("/notes", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/notes.html"));
+});
+
+router.get("*", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/index.html"));
     // console.log(get);
     // console.log(join);
 });
-//call for notes.html
-router.get("/notes", function (req, res) {
-    res.sendFile(path.join(__dirname, "./public/notes.html"));
-});
+// //call for notes.html
+// router.get("/notes", function (req, res) {
+//     res.sendFile(path.join(__dirname, "../public/notes.html"));
+// });
 
 
 
