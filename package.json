@@ -8,7 +8,7 @@
     "dev": "nodemon server.js",
     "start": "node server.js"
   },
-  "engines":{
+  "engines": {
     "node": "12.19.0",
     "npm": "6.14.8"
   },
